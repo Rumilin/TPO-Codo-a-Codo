@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header" "banner banner banner" "contenido contenido sidebar" "cuadros cuadros cuadros" "temperatura temperatura temperatura" "footer footer footer";
+}
+
+
+/* Barra de navegacion */
+
+.contenedor .header {
+    background: rgb(20, 20, 20);
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    /* se crea otro grid dentro de la barra de navegacion */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-area: header;
+}
+
+.contenedor .header .logo {
+    text-align: center;
+    grid-column: 1/3;
+}
+
+.contenedor .header nav {
+    display: inline-block;
+    grid-column: 3/7;
+}
+
+.contenedor .header nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(199, 199, 199);
+}
+
+.contenedor .header nav a:hover {
+    color: goldenrod;
+}
+
+.contenedor .header .botones {
+    grid-column: 9/12;
+    text-align: right;
+}
+
+.contenedor .header .botones .button__header {
+    border-radius: 2px;
+    background: none;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid rgba(218, 165, 32, 0.452);
+    border-radius: 6px;
+    color: rgb(199, 199, 199);
+    font-size: 15px;
+}
+
+.contenedor .header .botones .button__header:hover {
+    border: 2px solid goldenrod;
+    background-color: rgba(218, 165, 32, 0.527);
+}
+
+
+/* Banner */
+
+.banner {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-area: banner;
+}
+
+.banner img {
+    height: auto;
+    width: 100%;
+}
+
+
+/*Catalogo*/
+
+.catalogo {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 100px;
+}
+
+.catalogo .bannercatalogo .titulocatalogo {
+    /* color: #e67e00;
+    text-decoration-line: underline;
+    text-align: center; */
+    text-align: center;
+    font-family: neon;
+    color: goldenrod;
+    font-size: 2rem;
+    line-height: 3vw;
+    text-shadow: 0 0 3vw #fAA43D;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.catalogo .bannercatalogo .textocatalogo {
+    text-align: center;
+}
+
+.catalogo .imgcatalogo {
+    text-align: center;
+}
+
+.catalogo .imgcatalogo img {
+    border-radius: 7px;
+}
+
+
+/* Contenido */
+
+.contenedor .contenido {
+    grid-area: contenido;
+}
+
+@font-face {
+    font-family: neon;
+    src: url(fonts/Tasty\ Brownies\ DEMO.ttf);
+}
+
+@font-face {
+    font-family: sans;
+    src: url(fonts/sans/SourceSansPro-Black.ttf);
+}
+
+.contenedor .contenido h1 {
+    text-align: center;
+    font-family: neon;
+    color: goldenrod;
+    font-size: 3rem;
+    line-height: 11vw;
+    text-shadow: 0 0 3vw #fAA43D;
+    padding-bottom: 1rem;
+}
+
+.contenedor .contenido p {
+    font-size: 1.5rem;
+}
+
+
+/* .contenedor .contenido .neon {
+    font-family: neon;
+    color: #FB4264;
+    font-size: 9vw;
+    line-height: 9vw;
+    text-shadow: 0 0 3vw #F40A35;
+} */
+
+
+/* Sidebar */
+
+.contenedor .sidebar {
+    background: transparent;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+}
+
+.contenedor .sidebar .img1 {
+    height: auto;
+    max-height: 68vh;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.contenedor .sidebar .img2 {
+    display: none;
+}
+
+
+/* .contenedor .sidebar {
+    background: #fAA43D;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+} */
+
+
+/* Widget */
+
+.contenedor .cuadros {
+    background: transparent;
+    color: white;
+    text-shadow: 0 0 1vw #000000;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: cuadros;
+}
+
+.contenedor .cuadros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "widget-0 widget-1 widget-2";
+    grid-gap: 10px;
+    text-align: center;
+    font-family: sans;
+}
+
+.contenedor .cuadros .widget-0 {
+    grid-area: widget-0;
+    min-height: 9rem;
+    padding: 1rem;
+    background: goldenrod;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 1vw #fAA43D;
+    background-image: radial-gradient(circle at 50% -20.71%, #ffed66 0, #ffd44c 25%, #ffb628 50%, #f09800 75%, #e67e00 100%);
+}
+
+.contenedor .cuadros .widget-1 {
+    grid-area: widget-1;
+    min-height: 9rem;
+    padding: 1rem;
+    background-image: radial-gradient(circle at 50% -20.71%, #ffed66 0, #ffd44c 25%, #ffb628 50%, #f09800 75%, #e67e00 100%);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 1vw #fAA43D;
+}
+
+.contenedor .cuadros .widget-2 {
+    grid-area: widget-2;
+    min-height: 9rem;
+    padding: 1rem;
+    background-image: radial-gradient(circle at 50% -20.71%, #ffed66 0, #ffd44c 25%, #ffb628 50%, #f09800 75%, #e67e00 100%);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 1vw #fAA43D;
+}
+
+
+/* Temperatura */
+
+.contenedor .temperatura {
+    background: rgb(20, 20, 20);
+    color: white;
+    text-shadow: 0 0 1vw #000000;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: temperatura;
+}
+
+.contenedor .temperatura {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "widget-5 widget-6 widget-6 widget-6 widget-7";
+    grid-gap: 10px;
+}
+
+.contenedor .temperatura {
+    background: transparent;
+}
+
+.contenedor .temperatura .widget-5 {
+    grid-area: widget-5;
+}
+
+.contenedor .temperatura .widget-6 {
+    grid-area: widget-6;
+    padding: 1rem;
+    background-image: radial-gradient(circle at 50% -20.71%, #ffed66 0, #ffd44c 25%, #ffb628 50%, #f09800 75%, #e67e00 100%);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 1vw #fAA43D;
+    font-family: sans;
+}
+
+.contenedor .temperatura .widget-7 {
+    grid-area: widget-7;
+}
+
+
+/* Footer */
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    background: rgb(20, 20, 20);
+    color: goldenrod;
+    padding: 10px;
+    border-radius: 5px;
+    grid-area: footer;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "header header header" "banner banner banner" "contenido contenido contenido" "sidebar sidebar sidebar" "cuadros cuadros cuadros" "temperatura temperatura temperatura" "footer footer footer";
+    }
+    /* .contenedor .cuadros {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "widget-0" "widget-1" "widget-2";
+    } */
+    /* borrar imagen */
+    .contenedor .sidebar .img1 {
+        display: none;
+    }
+    .contenedor .sidebar .img2 {
+        display: initial;
+        height: auto;
+        max-height: vh;
+        width: auto;
+        max-width: 80vw;
+        border-radius: 7px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .contenedor {
+        grid-template-areas: "header header header" "banner banner banner" "contenido contenido contenido" "sidebar sidebar sidebar" "cuadros cuadros cuadros" "temperatura temperatura temperatura" "footer footer footer";
+    }
+    .contenedor .header {
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contenedor .sidebar .img1 {
+        display: none;
+    }
+    .contenedor .sidebar .img2 {
+        display: initial;
+        height: auto;
+        max-height: 45vh;
+        width: 100%;
+        border-radius: 7px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contenedor .sidebar .img1 {
+        display: none;
+    }
+    .contenedor .sidebar .img2 {
+        display: initial;
+        height: auto;
+        max-height: 45vh;
+        width: 100%;
+        border-radius: 7px;
+    }
+    .contenedor .cuadros {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "widget-0" "widget-1" "widget-2";
+    }
+    .contenedor .temperatura {
+        grid-template-areas: "widget-6 widget-6 widget-6 widget-6 widget-6";
+        font-size: 0.8rem;
+    }
+    .contenedor .temperatura .widget-5,
+    .contenedor .temperatura .widget-7 {
+        display: none;
+    }
+}

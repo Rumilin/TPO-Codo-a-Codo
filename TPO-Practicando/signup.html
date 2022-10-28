@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="client.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="" height="70vh"></a>
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catalogo</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <div class="botones">
+                <a href="login.html"><input type="button" value="Iniciar Sesion" class="button__header"></a>
+            </div>
+        </header>
+
+        <main class="contenido fondo">
+            <div class="box">
+                <h1>Crear Cuenta</h1>
+                <form action="" method="post" id="form">
+                    <div class="input-box">
+                        <input type="text" placeholder="Nombre" class="input-control" id="nombre">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Apellido" class="input-control" id="apellido">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Email" class="input-control" id="email">
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" class="input-control" id="password">
+
+                    </div>
+                    <button type="submit" class="btn">Crear Cuenta</button>
+                    <p id="warning" class="warning"></p>
+                </form>
+                <br>
+                <p>Ya tienes una cuenta? <a href="login.html" class="gradient-text">Inicio Sesion</a></p>
+            </div>
+
+        </main>
+
+        <div class="widget-1 ">
+            <h3></h3>
+        </div>
+
+        <div class="widget-2 ">
+            <h3></h3>
+        </div>
+
+        <footer class="footer ">
+            <p>© Todos los Derechos Reservados.</p>
+        </footer>
+    </div>
+    <script src="validacion.js"></script>
+</body>
+
+</html>
